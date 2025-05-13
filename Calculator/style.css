@@ -1,0 +1,125 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1f1f2e, #2e2e45);
+}
+
+/* Calculator Container */
+.calculator {
+  width: 350px;
+  background: #2a2a3b;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px #1b1b29,
+              -15px -15px 30px #393958;
+  overflow: hidden;
+}
+
+/* Output Display */
+#output {
+  background: #232336;
+  padding: 25px 20px;
+  min-height: 110px;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  border-bottom: 1px solid #3c3c5c;
+}
+
+#expression {
+  font-size: 1.2rem;
+  color: #9fa3bc;
+  word-wrap: break-word;
+}
+
+#result {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+/* Input Grid */
+#input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 14px;
+  border: none;
+  background: #2f2f44;
+  color: #fff;
+  box-shadow: inset 2px 2px 5px #212134,
+              inset -2px -2px 5px #3d3d5a;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3d3d5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Button Colors */
+.btn.light {
+  background: #f0f0f3;
+  color: #333;
+  box-shadow: inset 2px 2px 6px #d1d1d9,
+              inset -2px -2px 6px #ffffff;
+}
+
+.btn.blue {
+  background: linear-gradient(145deg, #4568dc, #b06ab3);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(96, 67, 212, 0.4);
+}
+
+.btn.dark {
+  background: #383850;
+  color: #f4f4f4;
+}
+
+/* Responsive for Smaller Devices */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .btn {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  #result {
+    font-size: 2rem;
+  }
+}
+
+.btn.pressed {
+  transform: scale(0.95);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
